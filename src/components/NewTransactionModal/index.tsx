@@ -39,9 +39,6 @@ export function NewTransactionModal() {
     reset,
   } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormSchema),
-    defaultValues: {
-      type: 'income',
-    },
   })
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
